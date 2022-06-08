@@ -1,0 +1,38 @@
+
+<html>
+  <head>
+
+  </head>
+  <body>
+    
+    <h3>Uploaded Books</h3>
+{% if books%}
+
+  <table>
+    <thead>
+    <tr>
+    <th>Book Title</th>
+    <th>PDF</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+    <td colspan="4" rowspan="4">
+    </td>
+    </tr>
+    </tfoot>
+    <tbody>
+      {% for book in books %}
+        <tr>
+          <td>{{book.title}}</td>
+          <td>{{book.pdf}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+</div>
+{%else%}
+<h1>Have 0 book</h1>
+{%endif%}
+  </body>
+</html>
